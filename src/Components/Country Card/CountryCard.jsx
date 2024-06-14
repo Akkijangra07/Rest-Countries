@@ -1,5 +1,6 @@
 import React from 'react'
 import Countrydeatils from '../Country details/Countrydeatils'
+import { Link } from 'react-router-dom'
 
 
 
@@ -8,7 +9,8 @@ function CountryCard({name ,region,capital,population,flags}) {
 
   return (
     <>
-      <a href={`/country?name=${name}`} onClick={()=>Countrydeatils()}>
+      {/* <a href={`/country?name=${name}`} onClick={()=>Countrydeatils()}> */}
+      <Link to={`/country?name=${name}`}>
        <div className='country-card' style={{display:"flex",float:"left",margin:"20px",alignItems:"center",justifyContent:"center", flexDirection:"column",borderRadius:"10px",width:"20rem",height:"24rem"}}>
         <img src={flags} alt="" style={{height:"12rem",width:"20rem",WebkitBorderTopLeftRadius:"8px",WebkitBorderTopRightRadius:"8px",borderBottom:"2px solid black"}}/>
         <br />
@@ -28,7 +30,8 @@ function CountryCard({name ,region,capital,population,flags}) {
           </p>
           <br />
        </div>
-       </a>
+       </Link>
+       {/* </a> */}
     </>
   )
 }
