@@ -13,15 +13,15 @@ import Countrydeatils from './Components/Country details/Countrydeatils.jsx'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Rest-countries/",
     element: <App/>,
     children:[
       {
-        path: "/",
+        path: "/Rest-countries/",
         element: <Home/>,
       },
       {
-        path: "/Country",
+        path: "/Rest-countries//Country",
         element: <Countrydeatils/>,
       },
     ]
